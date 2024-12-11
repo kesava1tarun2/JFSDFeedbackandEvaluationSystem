@@ -8,10 +8,9 @@
         body {
             font-family: 'Arial', sans-serif;
             background: url('https://t3.ftcdn.net/jpg/05/00/34/58/360_F_500345899_4OqmtspFst6SRnNQvLj7h7TfKOrBwTer.jpg') no-repeat center center fixed; 
-            /* Example online image URL https://t3.ftcdn.net/jpg/05/00/34/58/360_F_500345899_4OqmtspFst6SRnNQvLj7h7TfKOrBwTer.jpg */
-            background-size: cover; /* Ensure the image covers the viewport */
-            height: 100vh; /* Full viewport height */
-            margin: 0; /* Remove default margin */
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,14 +19,14 @@
         .login-container {
             width: 350px;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
 
         h2 {
-            color: #333; /* Text color */
+            color: #333;
             margin-bottom: 20px;
         }
 
@@ -41,7 +40,7 @@
         }
 
         button {
-            background-color: #4CAF50; /* Green button */
+            background-color: #4CAF50;
             color: white;
             padding: 14px;
             margin: 8px 0;
@@ -50,13 +49,18 @@
             cursor: pointer;
             width: 100%;
         }
+
+        .details {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
     </style>
 </head>
 <body>
     <div class="login-container">
         <h2>Login</h2>
         
-          <!-- Display error message if login fails -->
         <div th:if="${error}" style="color: red; font-weight: bold;">
             <p th:text="${error}"></p>
         </div>
@@ -71,6 +75,12 @@
             <button type="submit">Login</button>
         </form>
         <a href="/student/register">Register as Student</a> | <a href="/admin/register">Register as Admin</a>
+
+        <div class="details">
+            <p>Students: 2200030001 and password as 30001.</p>
+            <p>Admins: 0001 and password is 0001.</p>
+            <p>users are able to numbers only.</p>
+        </div>
     </div>
 </body>
 </html>
